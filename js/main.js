@@ -1,3 +1,5 @@
+/*----------------  imports  ----------------*/
+
 /*----------------  tabs  ----------------*/
 
 const x=200;
@@ -69,3 +71,41 @@ function drop(){
 }
 
 drop();
+
+const links=document.querySelectorAll(".nonhome")
+const yboxes=document.querySelectorAll("yellowbox")
+
+/*----------------  hovers  ----------------*/
+
+function hoverS(selector){
+    selector.addEventListener('mouseover', () => {
+        selector.classList.remove("changeBack")
+        selector.classList.add("change")
+    })
+    selector.addEventListener("mouseout", () =>{
+        selector.classList.remove("change")
+        selector.classList.add("changeBack")
+    })
+}
+
+function lightUp(selector){
+    selector.addEventListener('mouseover', () => {
+        selector.classList.remove("unligth")
+        selector.classList.add("light")
+    })
+    selector.addEventListener("mouseout", () =>{
+        selector.classList.remove("unligth")
+        selector.classList.add("light")
+    })
+}
+
+for (element of links) {
+    hoverS(element)
+  } 
+
+for (box of yboxes) {
+    lightUp(box)
+  } //?
+
+/*----------------  aniamte.js  ----------------*/
+
