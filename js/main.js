@@ -58,12 +58,15 @@ changeThree();
 
 /*----------------  dropdown menu  ----------------*/
 
-const bt = document.getElementById("btn");
-const dropdownContent1 = document.getElementById("#side1")
-const dropdownContent2 = document.getElementById("#side2")
+
 
 
 function drop(){
+    const bt = document.getElementById("bt");
+    const dropdownContent1 = document.getElementById("side1")
+    const dropdownContent2 = document.getElementById("side2")
+
+
     bt.addEventListener("click", () => {
         dropdownContent1.classList.add("visible")
         dropdownContent2.classList.add("visible")
@@ -72,10 +75,10 @@ function drop(){
 
 drop();
 
-const links=document.querySelectorAll(".nonhome")
-const yboxes=document.querySelectorAll("yellowbox")
-
 /*----------------  hovers  ----------------*/
+
+const links=document.querySelectorAll(".nonhome")
+const yboxes=document.querySelectorAll(".yellowbox")
 
 function hoverS(selector){
     selector.addEventListener('mouseover', () => {
@@ -90,14 +93,18 @@ function hoverS(selector){
 
 function lightUp(selector){
     selector.addEventListener('mouseover', () => {
-        selector.classList.remove("unligth")
+        selector.classList.remove("unlight")
         selector.classList.add("light")
     })
     selector.addEventListener("mouseout", () =>{
-        selector.classList.remove("unligth")
-        selector.classList.add("light")
+        selector.classList.remove("light")
+        selector.classList.add("unlight")
     })
 }
+
+for (element of listings) {
+    hoverS(element)
+  } 
 
 for (element of links) {
     hoverS(element)
