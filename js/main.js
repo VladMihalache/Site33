@@ -68,8 +68,8 @@ function drop(){
 
 
     bt.addEventListener("click", () => {
-        dropdownContent1.classList.add("visible")
-        dropdownContent2.classList.add("visible")
+        dropdownContent1.classList.toggle("visible")
+        dropdownContent2.classList.toggle("visible")
     })
 }
 
