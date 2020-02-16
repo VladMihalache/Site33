@@ -102,9 +102,6 @@ function lightUp(selector){
     })
 }
 
-for (element of listings) {
-    hoverS(element)
-  } 
 
 for (element of links) {
     hoverS(element)
