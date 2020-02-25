@@ -300,6 +300,60 @@ nav a{
     margin-bottom:17px;
 }
 
+/*----------------  Help  ----------------*/
+/*
+.robo{
+    width:250px;
+    text-align: center;
+    padding-right:30px;
+    position: fixed;
+    bottom: 75%;
+}
+
+.helpButton{
+    padding: 6px 8px;
+    display:flex;
+    justify-content: center;
+    cursor: pointer;
+    z-index:1;
+}
+
+.helpButton h6{
+    font-size:20px;
+    margin-right: 5px;
+}
+
+.helpButton img{
+    max-width:25px;
+    max-height:25px;
+    float:right;
+}
+
+.minus{
+    width:20px;
+    height:20px;
+}
+
+.displayNone{
+    display: none;
+}
+
+.helpContent{
+    overflow: hidden;
+    max-height:0;
+}
+
+.helpContent a{
+    text-decoration: none;
+    color:#008AFF;
+}
+
+.robo img{
+    height:100px;
+    width:100px;
+}
+*/
+
 /*----------------  first section  ----------------*/
 
 .typeClean{
@@ -675,9 +729,86 @@ margin-right:15px;
 
 /*----------------  sixth section  ----------------*/
 
+.gallery{
+    padding-top:140px;
+    padding-bottom:120px;
+}
+
+.gallery h2{
+    padding-bottom:175px;
+}
+
+.items{
+    display:flex;
+    position:relative;
+}
+
+.item{
+    min-width: 250px;
+    min-height: 250px;
+    border-radius: 50%;
+    transition: all 300ms ease-in-out;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left:auto;
+    right:auto;
+    z-index:-2;
+    opacity:0;
+}
+
+.item.current{
+    opacity:1;
+    z-index:2;
+    box-shadow: 0px 0px 105px -35px rgba(0, 0, 0, 0.75);
+}
+
+.item.prev{
+    opacity:0.35;
+    z-index:1;
+    transform: translate(-105%, -35%);
+}
+
+.item.next{
+    opacity:0.15;
+    z-index:1;
+    transform: translate(15%, -35%);
+}
+
+.buttonsX{
+    display:flex;
+    margin:0 auto;
+    width:400px;
+    position: absolute;
+    transform: translate(-47.6%, -45%);
+    z-index:50;
+}
+
+.buttonX{
+    width:55px;
+    height:55px;
+    border-radius: 50%;
+    z-index:100;
+    background-color: royalblue;
+    opacity:0.7;
+    cursor:pointer;
+    transform: translate(100%, 5%);
+}
+
+.buttonX:hover{
+    opacity:1;
+    transition: all 0.2s ease-in-out;
+}
+
+.buttonX:last-child{
+    margin-left:160px;
+}
+
+
+/*----------------  seventh section  ----------------*/
+
 .latestNews{
-    padding-top:135px;
-    padding-bottom:135px;
+    padding-top:175px;
+    margin-bottom:119px;
 }
 
 .latestNews .title{
@@ -704,7 +835,7 @@ margin-right:15px;
 
 .new .blue{
     margin-bottom:20px;
-    width:90%;
+    width:100%;
     font-size:25.78px;
 }
 
@@ -717,6 +848,49 @@ margin-right:15px;
     color:#008AFF;
     text-decoration: underline;
     font-size:12px;
+}
+
+/*----------------  eight section  ----------------*/
+
+.terms{
+    padding-top:90px;
+    padding-bottom:200px;
+}
+
+.tc{
+    text-align: center;
+    margin-bottom:50px;
+}
+
+.accordions{
+    margin:0 auto;
+    width:70%;
+}
+
+.accordionButton{
+    background-color: #FFE824;
+    padding:15px 20px;
+    /*border:solid 1px #13287E;*/
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.accordion
+
+.accordionButton:hover{
+    background-color:#008AFF;
+    color: #D8D8DE;
+}
+
+.accordionContent{
+    max-height:0;
+    overflow: hidden;
+    background-color:rgb(232, 232, 241);
+    transition:all 0.7s ease-in-out;
+}
+
+.accordionContent p{
+    margin-bottom:35px;
 }
 
 /*----------------  footer  ----------------*/
@@ -908,6 +1082,18 @@ header .text{
         margin:0 auto
       }
 
+      .item{
+        min-width: 200px;
+        min-height: 200px;
+        border-radius: 50%;
+        transition: all 300ms ease-in-out;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left:auto;
+        right:auto;
+        z-index:-2;
+        opacity:0;
+    }
 
 }
 
@@ -1251,3 +1437,117 @@ header{
     animation-duration: 1.2s;
     animation-fill-mode:forwards;
   }
+
+@-webkit-keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+    }
+  }
+  
+  .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+    animation-duration: 1.2s;
+    animation-fill-mode:forwards;
+  }
+
+  @-webkit-keyframes slideInDown {
+    from {
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+      visibility: visible;
+    }
+  
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  @keyframes slideInDown {
+    from {
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+      visibility: visible;
+    }
+  
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .slideInDown {
+    -webkit-animation-name: slideInDown;
+    animation-name: slideInDown;
+    animation-duration: 1.2s;
+    animation-fill-mode:forwards;
+  }
+
+/*
+
+@keyframes helpButtonX {
+    0% {max-height: 0;} 
+    100% {max-height:200px;}
+  }
+
+  .helpButtonX {
+    animation-name: helpButtonX;
+    animation-duration: 1s;
+    transition:max-height;
+    animation-fill-mode:backwards;
+    animation-timing-function: ease-in-out;
+    max-height:200px;
+}
+
+@keyframes helpButtonY {
+    0% {max-height: 200px;} 
+    100% {max-height:0;}
+  }
+
+  .helpButtonY {
+    animation-name: helpButtonY;
+    animation-duration: 1s;
+    transition:max-height;
+    animation-fill-mode:backwards;
+    animation-timing-function: ease-in-out;
+    max-height:0;
+}
+
+  @keyframes helpButton1 {
+    0% {transform: translateX(0);} 
+    100% {transform: translateX(54%);}
+}
+
+.helpButton1 {
+    animation-name: helpButton1;
+    animation-duration: 1s;
+    animation-fill-mode:forwards;
+}
+
+@keyframes helpButton2 {
+    0% {transform: translateX(0%);} 
+    100% {transform: translateX(-54%);}
+}
+
+.helpButton2 {
+    animation-name: helpButton2;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode:forwards;
+}
+*/
