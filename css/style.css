@@ -875,8 +875,6 @@ margin-right:15px;
     cursor: pointer;
 }
 
-.accordion
-
 .accordionButton:hover{
     background-color:#008AFF;
     color: #D8D8DE;
