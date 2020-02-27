@@ -166,24 +166,31 @@ buttonWork()
 
 /*----------------  helpButton  ----------------*/
 
-/*const accButton1=document.querySelector(".accButton")
-const accContent1=document.querySelector(".accContent")
+const helpButton1=document.querySelector(".helpButton")
+const helpContent1=document.querySelector(".helpContent")
 
 const plus=document.querySelector(".plus")
 const minus=document.querySelector(".minus")
 
 function help(){
-    accButton1.addEventListener("click", ()=>{
-    if(accContent1.style.maxHeight){
-        accContent1.style.maxHeight=null;
+    helpButton1.addEventListener("click", ()=>{
+        if(minus.classList.contains("displayNone")){
+            minus.classList.remove("displayNone")
+            plus.classList.add("displayNone")
+        }else{
+            plus.classList.remove("displayNone")
+            minus.classList.add("displayNone")
+        }
+
+    if(helpContent1.style.maxHeight){
+        helpContent1.style.maxHeight=null;
     }else{
-        accContent1.style.maxHeight=accContent1.scrollHeight + "px";
+        helpContent1.style.maxHeight=helpContent1.scrollHeight + "px";
     }
   })  
 }
 
 help();
-*/
 /*----------------  accordion  ----------------*/
 
 /*const accordion1=document.querySelector(".accordionButton1");
